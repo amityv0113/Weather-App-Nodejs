@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+    {{>header}}
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+
+            </div>
+            <div class="col-sm-8 text-left">
+                <div class="jumbotron">
+                    <h2 style="text-align:center">WEATHER FORCAST</h2>
+                </div>
+                <div class="jumbotron">
+                    <p>To get weather report of your area provide address of your location</p>
+                    <form>
+                        <input class="form-control" type="text" placeholder="city name" style="margin-top:5%;">
+                        <button type="submit" class="btn btn-info active" style="margin-top:10px;">Search</button>
+
+                    </form>
+                </div>
+                <div>
+                    <div>
+
+                        <img id="img-1" src="" alt="" style="margin-bottom: 20px;">
+
+                    </div>
+                    <div id="p-2" style="padding:10px ;margin-top:10px;margin-bottom:10px;font-size:large">
+
+                    </div>
+                    <div id="p-3" style="padding:10px ;margin-top:10px;margin-bottom:10px;font-size:large">
+
+                    </div>
+                    <div id="p-4" style="padding:10px ;margin-top:10px;margin-bottom:10px;font-size:large">
+
+                    </div>
+                    <div class="w3-card-4" id="p-1"
+                        style="padding:20px; font-size:large; font:bold ;font-style:inherit;margin-bottom:10%">
+
+                    </div>
+                    
+
+                    <div id="map"></div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-sm-2 sidenav">
+
+        </div>
+    </div>
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <p></p>
+    </footer>
+
+    <script src="/javascript_folder/for_web_frontend.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLzqtuA0dttc6j7GXSi5S5HtBOzYglR3I&callback=initMap"
+        type="text/javascript"></script>
+</body>
+
+</html>
